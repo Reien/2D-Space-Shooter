@@ -1,8 +1,14 @@
+## VS code ignore##
+###################
 .vs/
 .vscode/
 
-Assets/TextMesh Pro/
+## Unity Generated files ##
+###########################
 Temp/
 obj/
 Library/
-UnityPackageManager/
+
+## Unity Plugins currently not used ##
+######################################
+Assets/TextMesh Pro/
