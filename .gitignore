@@ -1,0 +1,8 @@
+.vs/
+.vscode/
+
+Assets/TextMesh Pro/
+Temp/
+obj/
+Library/
+UnityPackageManager/
