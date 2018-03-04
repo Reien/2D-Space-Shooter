@@ -14,6 +14,8 @@ public class PlayerControl : MonoBehaviour {
 
 	public float speed;
 
+	public bool firing = false;
+
 	public void Awake()
 	{
 		lives = MaxLives;
@@ -31,13 +33,7 @@ public class PlayerControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		// Fire bullets when spacebar is pressed
-		if(Input.GetButtonDown("Jump"))
-		{
-			// Instantiate the bullet
-			GameObject bullet = (GameObject)Instantiate(PlayerBulletGO);
-			bullet.transform.position = bulletPosition.transform.position;
-		}
+		FireBullets();
 
 		float x = Input.GetAxisRaw ("Horizontal");
 		float y = Input.GetAxisRaw ("Vertical");
@@ -102,5 +98,17 @@ public class PlayerControl : MonoBehaviour {
 
 		// Set the position of the explosion
 		explosion.transform.position = transform.position;
+	}
+
+	void FireBullets()
+	{
+			// Fire bullets when spacebar is pressed
+		if(Input.GetButton("Jump") && !firing)
+		{
+			// Instantiate the bullet
+			GameObject bullet = (GameObject)Instantiate(PlayerBulletGO);
+			bullet.transform.position = bulletPosition.transform.position;
+			firing = true;
+		}
 	}
 }
