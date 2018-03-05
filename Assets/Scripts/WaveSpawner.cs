@@ -5,6 +5,8 @@ public class WaveSpawner : MonoBehaviour {
 
 	public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
+	
+	// Custom class for better organization
 	[System.Serializable]
 	public class Wave
 	{
@@ -14,6 +16,7 @@ public class WaveSpawner : MonoBehaviour {
 		public float rate;
 	}
 
+	// Creates an array of the class Wave with its properties
 	public Wave[] waves;
 	private int nextWave = 0;
 	public int NextWave
