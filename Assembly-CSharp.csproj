@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\EnemySpawnerScript.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MainMenuScript.cs" />
+     <Compile Include="Assets\Scripts\OptionsScript.cs" />
      <Compile Include="Assets\Scripts\PlayerBullet.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
