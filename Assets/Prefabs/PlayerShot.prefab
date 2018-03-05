@@ -146,7 +146,7 @@ MonoBehaviour:
   ChangeY: 0
   ChangeXRotated: 0
   ChangeYRotated: 0
-  MainCamera: {fileID: 0}
+  MainCamera: {fileID: 4125266023724446, guid: 50d7c6690d665fc43be3e7992399797b, type: 2}
 --- !u!212 &212333722945537124
 SpriteRenderer:
   m_ObjectHideFlags: 1

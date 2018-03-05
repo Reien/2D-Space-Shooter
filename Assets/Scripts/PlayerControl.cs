@@ -14,11 +14,14 @@ public class PlayerControl : MonoBehaviour {
 
 	public float speed;
 
-	public bool firing = false;
+	public float FireRate;
+	private float canFire;
 
 	public void Awake()
 	{
 		lives = MaxLives;
+
+		canFire = FireRate;
 
 		LivesTextUI.text = lives.ToString ();
 
@@ -103,12 +106,16 @@ public class PlayerControl : MonoBehaviour {
 	void FireBullets()
 	{
 			// Fire bullets when spacebar is pressed
-		if(Input.GetButton("Jump") && !firing)
+		if(Input.GetButton("Jump") && canFire <= 0)
 		{
 			// Instantiate the bullet
 			GameObject bullet = (GameObject)Instantiate(PlayerBulletGO);
 			bullet.transform.position = bulletPosition.transform.position;
-			firing = true;
+			canFire = FireRate;
+		}
+		else
+		{
+			canFire -= Time.deltaTime;
 		}
 	}
 }
